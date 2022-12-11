@@ -1,7 +1,7 @@
 from pytube import YouTube
 
-url = 'https://youtu.be/rNQpWlpeBxU'
+url = 'https://youtu.be/qxIBWL05RoA'
 
 yt = YouTube(url)
-yt.streams.order_by('resolution').desc()
+yt.streams.order_by('resolution').asc()
 yt = yt.streams[0].download()
