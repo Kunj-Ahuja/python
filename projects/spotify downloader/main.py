@@ -1,3 +1,12 @@
+print('''───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───
+───█▒▒░░░░░░░░░▒▒█───
+────█░░█░░░░░█░░█────
+─▄▄──█░░░▀█▀░░░█──▄▄─
+█░░█─▀▄░░░░░░░▄▀─█░░█
+█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█
+█░░║║║╠─║─║─║║║║║╠─░░█
+█░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█''')
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import os
@@ -25,7 +34,6 @@ for i in tracks:
     videosSearch = VideosSearch(i) 
     if len(videosSearch.result()['result']) < 1:
         pass
-    print(i +' ' +videosSearch.result()['result'][0]['link'])
     links.append(videosSearch.result()['result'][0]['link'])
 
 print(f'Total tracks: {len(links)}')
